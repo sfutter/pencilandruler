@@ -1,4 +1,6 @@
 Pencilandruler::Application.routes.draw do
+  resources :images
+
   devise_for :admins
   root "pages#home"
   
