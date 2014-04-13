@@ -19,6 +19,14 @@
             <li><%= link_to "Our Skills", our_skills_path %></li> 
             <li><%= link_to "Our Work", our_work_path %></li> 
             <li><%= link_to "Contact", contact_path %></li> 
+            <li>
+              <% if admin_signed_in? %>
+                <%= link_to('Logout', destroy_admin_session_path, method: :delete) %>
+                  <% else %>
+                <%= link_to('Login', new_admin_session_path) %>
+              <% end %>
+            </li>
+                    
           </ul>
         </div><!-- /.navbar-collapse -->
     </div>

@@ -1,5 +1,7 @@
 Pencilandruler::Application.routes.draw do
+  devise_for :admins
   root "pages#home"
+  
   get "our_skills" => "pages#our_skills"  #creates our_skills_path
   get "our_work" => "pages#our_work" #creates our_work_path
   get "contact" => "pages#contact" #creates contact_path
